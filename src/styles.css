@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-faith-primary: #1928E3;         /* Main blue */
+  --color-faith-primary-dark: #0A387E;    /* Deep navy */
+  --color-faith-accent: #F3FE0E;          /* Yellow highlight */
+
+  --color-faith-surface: #ffffff;         /* clean white backgrounds */
+  --color-faith-surface-alt: #f4f7fc;     /* soft light grey */
+  --color-faith-dark: #0a1a33;            /* dark mode surface */
+  --color-faith-darker: #050a14;          /* deepest background */
+
+  --color-faith-text: #1f2937;            /* primary text */
+  --color-faith-text-light: #4b5563;      /* secondary text */
+  --color-faith-text-muted: #9ca3af;      /* muted text */
+  --color-faith-border: #e5e7eb;          /* light border */
+  --color-faith-border-dark: #1e293b;     /* dark mode border */
+
+  --font-faith: "Inter", sans-serif;
+}
+
+html, body {
+  font-family: var(--font-faith);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
