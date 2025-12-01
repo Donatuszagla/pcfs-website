@@ -1,19 +1,25 @@
-<nav class="navbar ">
-    <div class="container">
-        <div class="logo"></div>
-        <h1 class="font-bold text-2xl text-faith-text-light">{{ title() }}</h1>
+<nav class="navbar z-50">
+  <a href="#">
+    <div class="container flex items-center space-x-4 ms-4">
+      <div
+        class="logo rounded-full overflow-hidden h-12 w-12 bg-faith-accent flex items-center justify-center"
+      >
+        <img src="/logo.png" alt="Logo" />
+      </div>
+      <h1 class="hidden lg:block font-bold text-2xl text-faith-text-light text-nowrap">
+        {{ title() }}
+      </h1>
     </div>
-    <div class="container">
-        <ul class="container nav-links space-x-4">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Branches</a></li>
-            <li><a href="#">Media</a></li>
-            <li><a href="#">Events</a></li>
-        </ul>
-    </div>
-    <div class="container">
-        <button class="btn">Contact Us</button>
-    </div>
+  </a>
+  <div class="container flex items-center space-x-4">
+    <ul class="container nav-links space-x-4">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Branches</a></li>
+      <li><a href="#">Media</a></li>
+      <li><a href="#">Events</a></li>
+    </ul>
+  </div>
+  <div class="container me-5">
+    <button class="btn text-nowrap">Contact Us</button>
+  </div>
 </nav>
-<router-outlet></router-outlet>
