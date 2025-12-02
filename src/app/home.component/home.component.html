@@ -1,5 +1,6 @@
 <div
-  class="home flex flex-col space-y-6 pt-[100px] py-6 justify-center items-center min-h-screen px-4"
+  class="home flex flex-col space-y-6 pt-[100px] py-6 justify-center items-center min-h-screen px-4 transition-all duration-2000"
+  [style.background-image]="currentBgImage"
 >
   <div class="container space-y-6 px-4">
     <h2 class="text-white text-5xl md:text-7xl font-bold text-center flex flex-col">
@@ -10,27 +11,40 @@
       Kingdom Assignment.
     </p>
   </div>
-  <div
-    class="container relative bg-faith-accent-light rounded-lg p-6 mt-6 hidden md:flex items-center justify-between max-w-204"
-  >
-    <div class="dot absolute h-8 w-8 bg-faith-accent rounded-full left-5 top-5"></div>
-    <div
-      class="img-container flex flex-col md:flex-row space-x-4 space-y-6 w-full h-[fit-content] md:h-100"
-    >
-      <div
-        class="seth-img min-h-100 max-h-150 md:max-h-100 w-full md:w-1/2 w-1 bg-white overflow-hidden"
-      >
-        <img src="/Seth.png" alt="Reverend Seth Lartey image" class="" />
-      </div>
-      <div
-        class="david-img min-h-100 max-h-150 md:max-h-100 w-full md:w-1/2 w-1 bg-white overflow-hidden"
-      >
-        <img src="/David.png" alt="Reverend David Komlagah image" class="mt-25" />
-      </div>
+  <div>
+    <div class="bg-faith-accent rounded-lg px-6 py-0 w-[fit-content] mx-auto mt-6">
+      <h3 class="text-faith-text text-3xl text-center py-4 m-0 p-0">MEET OUR SPIRITUAL HEADS</h3>
     </div>
-    <div class="dot absolute h-8 w-8 bg-faith-accent rounded-full right-5 bottom-5"></div>
+    <div
+      class="container relative bg-faith-accent-light rounded-lg p-6  mt-6 items-center justify-between max-w-204"
+    >
+      <div class="dot absolute h-8 w-8 bg-faith-accent rounded-full left-2 top-2"></div>
+      <div
+        class="img-container flex flex-col md:flex-row space-x-4 space-y-20 w-full h-[fit-content] md:h-80"
+      >
+        <div
+          class="seth-img flex flex-col justify-end relative min-h-80 max-h-150  w-full md:w-1/2 w-1 bg-white"
+        >
+          <img src="/Seth.png" alt="Reverend Seth Lartey image" class="w-full h-full" />
+          <div class="absolute -bottom-8 left-8 bg-faith-accent bg-opacity-80 px-4 w-[80%] pb-2 rounded-lg">
+            <h4 class="text-faith-text text-lg font-medium h-5">Rev. Dr. Seth Lartey</h4>
+            <p class="text-sm text-faith-primary h-2 my-1">General Overseer</p>
+          </div>
+        </div>
+        <div
+          class="david-img flex flex-col justify-end relative min-h-80 max-h-150 w-full md:w-1/2 w-1 bg-white"
+        >
+          <img src="/David.png" alt="Reverend David Komlagah image" class="w-full h-full" />
+          <div class="absolute -bottom-8 left-8 bg-faith-accent bg-opacity-80 px-4 pb-2 w-[80%] rounded-lg">
+            <h4 class="text-faith-text text-lg font-medium h-5">Rev. David Komlagah</h4>
+            <p class="text-sm text-faith-primary h-2 my-1">Head Pastor, Takoradi Branch</p>
+          </div>
+        </div>
+      </div>
+      <div class="dot absolute h-8 w-8 bg-faith-accent rounded-full right-2 bottom-2"></div>
+    </div>
   </div>
-  <div class="container flex flex-col items-center space-y-4">
+  <div class="container flex flex-col items-center mt-6">
     <button class="btn bg-faith-accent text-2xl">Read More {{ '>>>' }}</button>
   </div>
 </div>
