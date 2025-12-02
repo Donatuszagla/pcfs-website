@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'faith-about.component',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './about.component.css',
 })
 export class AboutComponent {
+  private activatedRoute = inject(ActivatedRoute);
 
+  routeComponent = this.activatedRoute.snapshot.url[0]?.path;
 }

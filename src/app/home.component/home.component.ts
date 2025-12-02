@@ -1,5 +1,7 @@
-import { Component, signal, OnInit } from '@angular/core';
+import { Component, signal, OnInit, inject } from '@angular/core';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'faith-home.component',
@@ -24,5 +26,10 @@ export class HomeComponent implements OnInit {
 
   ngOnDestroy() {
     clearInterval(this.intervalId);
+  }
+
+  private router = inject(Router);
+  navigateToAbout() {
+    this.router.navigate(['/about']);
   }
 }

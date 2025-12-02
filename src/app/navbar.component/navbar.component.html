@@ -1,5 +1,5 @@
 <nav class="navbar z-50 bg-gray-50 ">
-  <a href="#">
+  <a [routerLink]="'/'">
     <div class="container flex items-center space-x-2 sm:space-x-4 sm:ms-4">
       <div
         class="logo rounded-full overflow-hidden h-12 w-12 bg-faith-accent flex items-center justify-center"
@@ -19,9 +19,9 @@
   <div class="container hidden sm:flex items-center space-x-4">
     <ul class="container nav-links space-x-4">
       <li><a [routerLink]="['about']">About</a></li>
-      <li><a href="#">Branches</a></li>
-      <li><a href="#">Media</a></li>
-      <li><a href="#">Events</a></li>
+      <li><a [routerLink]="['branches']">Branches</a></li>
+      <li><a [routerLink]="['media']">Media</a></li>
+      <li><a [routerLink]="['events']">Events</a></li>
     </ul>
   </div>
   <div class="container me-5 hidden sm:flex items-center space-x-4">
@@ -32,7 +32,7 @@
       <lucide-angular name="menu" class="w-8 h-8"></lucide-angular>
     </button>
     <mat-menu #beforeMenu="matMenu" xPosition="before" yPosition="below" class="menu-item-container">
-      <button mat-menu-item class="menu-item">About</button>
+      <button mat-menu-item class="menu-item" (click)="navigateToAbout()">About</button>
       <button mat-menu-item class="menu-item">Branches</button>
       <button mat-menu-item class="menu-item">Media</button>
       <button mat-menu-item class="menu-item">Events</button>

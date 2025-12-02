@@ -2,7 +2,7 @@
   background-color: var(--color-faith-primary);
   background-size: cover;
   background-position: center;
-  background-blend-mode: overlay;
+  background-blend-mode: multiply;
 }
 
 .seth-img{
