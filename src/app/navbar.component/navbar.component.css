@@ -1,5 +1,6 @@
+
+
 .navbar {
-  background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 10px 0;
   display: flex;
@@ -10,10 +11,29 @@
   height: 70px;
 }
 
+.faith-menu{
+  color: var(--color-faith-text-light) !important;
+  background-color: transparent !important;
+}
+.faith-menu:hover,
+.faith-menu:focus {
+  color: var(--color-faith-primary) !important;
+  background-color: white !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.menu-item-container{
+  background-color: white !important;
+  padding: 50% !important;
+}
+.menu-item{
+  color: var(--color-faith-text-light) !important;
+  padding: 10px 20px !important;
+}
 
 .container {
   padding: 0 10px;
-  display: flex;
   width: fit-content;
 }
 

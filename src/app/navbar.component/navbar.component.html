@@ -1,17 +1,22 @@
-<nav class="navbar z-50">
+<nav class="navbar z-50 bg-gray-50 ">
   <a href="#">
-    <div class="container flex items-center space-x-4 ms-4">
+    <div class="container flex items-center space-x-2 sm:space-x-4 sm:ms-4">
       <div
         class="logo rounded-full overflow-hidden h-12 w-12 bg-faith-accent flex items-center justify-center"
       >
-        <img src="/logo.png" alt="Logo" />
+        <img
+          src="/logo.png"
+          alt="Logo"
+          class="h-full w-full object-cover transform scale-180 transition-transform duration-500"
+        />
       </div>
-      <h1 class="hidden lg:block font-bold text-2xl text-faith-text-light text-nowrap">
+      <h1 class="hidden lg:block font-bold sm:text-2xl text-faith-text-light text-nowrap">
         {{ title() }}
       </h1>
+      <h1 class="lg:hidden font-bold text-2xl text-faith-text-light text-nowrap">PCFS</h1>
     </div>
   </a>
-  <div class="container flex items-center space-x-4">
+  <div class="container hidden sm:flex items-center space-x-4">
     <ul class="container nav-links space-x-4">
       <li><a href="#">About</a></li>
       <li><a href="#">Branches</a></li>
@@ -19,7 +24,19 @@
       <li><a href="#">Events</a></li>
     </ul>
   </div>
-  <div class="container me-5">
+  <div class="container me-5 hidden sm:flex items-center space-x-4">
     <button class="btn text-nowrap">Contact Us</button>
+  </div>
+  <div class="menu me-5 sm:hidden">
+    <button matButton [matMenuTriggerFor]="beforeMenu" aria-label="Menu" class="faith-menu focus:outline-none">
+      <lucide-angular name="menu" class="w-8 h-8"></lucide-angular>
+    </button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before" yPosition="below" class="menu-item-container">
+      <button mat-menu-item class="menu-item">About</button>
+      <button mat-menu-item class="menu-item">Branches</button>
+      <button mat-menu-item class="menu-item">Media</button>
+      <button mat-menu-item class="menu-item">Events</button>
+      <button mat-menu-item class="menu-item">Contact Us</button>
+    </mat-menu>
   </div>
 </nav>

@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'faith-home.component',
-  imports: [],
+  imports: [MatSlideToggleModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

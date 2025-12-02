@@ -1,12 +1,14 @@
+import { IconsModule } from './../../../assets/icons.module';
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'faith-navbar',
-  imports: [RouterOutlet],
+  imports: [IconsModule, MatButtonModule, MatMenuModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css',
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
-  readonly title = signal('Paradise City of Faith Sanctuary')
+  readonly title = signal('Paradise City of Faith Sanctuary');
 }
