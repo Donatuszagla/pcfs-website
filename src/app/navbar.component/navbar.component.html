@@ -33,9 +33,9 @@
     </button>
     <mat-menu #beforeMenu="matMenu" xPosition="before" yPosition="below" class="menu-item-container">
       <button mat-menu-item class="menu-item" (click)="navigateToAbout()">About</button>
-      <button mat-menu-item class="menu-item">Branches</button>
-      <button mat-menu-item class="menu-item">Media</button>
-      <button mat-menu-item class="menu-item">Events</button>
+      <button mat-menu-item class="menu-item" (click)="navigateToBranches()">Branches</button>
+      <button mat-menu-item class="menu-item" (click)="navigateToMedia()">Media</button>
+      <button mat-menu-item class="menu-item" (click)="navigateToEvents()">Events</button>
       <button mat-menu-item class="menu-item">Contact Us</button>
     </mat-menu>
   </div>
