@@ -1,3 +1,4 @@
+import { transition, animate, style } from '@angular/animations';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar.component/navbar.component';
@@ -10,4 +11,15 @@ import { NavbarComponent } from './navbar.component/navbar.component';
 })
 export class App {
   protected readonly title = signal('pcfs-web');
+
+  // animation: [
+  //   trigger('fadeInAnimation', 
+  //   transition(':enter', [
+  //     style({ opacity: 0}), animate('400ms', style({ opacity: 1}))
+  //   ])
+  //   transition(':leave', [
+  //    animate('400ms', style({ opacity: 0}))
+  //   ])
+  //   )
+  // ]
 }

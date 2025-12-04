@@ -1,28 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-faith-primary: #1928E3;         /* Main blue */
-  --color-faith-primary-dark: #0A387E;    /* Deep navy */
-  --color-faith-accent: #F3FE0E;          /* Yellow highlight */
+  --color-faith-primary: #1928e3; /* Main blue */
+  --color-faith-primary-dark: #0a387e; /* Deep navy */
+  --color-faith-accent: #f3fe0e; /* Yellow highlight */
 
-  --color-faith-surface: #ffffff;         /* clean white backgrounds */
-  --color-faith-surface-alt: #f4f7fc;     /* soft light grey */
-  --color-faith-dark: #0a1a33;            /* dark mode surface */
-  --color-faith-darker: #050a14;          /* deepest background */
+  --color-faith-surface: #ffffff; /* clean white backgrounds */
+  --color-faith-surface-alt: #f4f7fc; /* soft light grey */
+  --color-faith-dark: #0a1a33; /* dark mode surface */
+  --color-faith-darker: #050a14; /* deepest background */
 
-  --color-faith-text: #1f2937;            /* primary text */
-  --color-faith-text-light: #4b5563;      /* secondary text */
-  --color-faith-text-muted: #9ca3af;      /* muted text */
-  --color-faith-border: #e5e7eb;          /* light border */
-  --color-faith-border-dark: #1e293b;     /* dark mode border */
+  --color-faith-text: #1f2937; /* primary text */
+  --color-faith-text-light: #4b5563; /* secondary text */
+  --color-faith-text-muted: #9ca3af; /* muted text */
+  --color-faith-border: #e5e7eb; /* light border */
+  --color-faith-border-dark: #1e293b; /* dark mode border */
 
-  --font-faith: "Inter", sans-serif;
+  --font-faith: 'Inter', sans-serif;
 }
 
-html, body {
+html,
+body {
   font-family: var(--font-faith);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -42,8 +43,76 @@ button:hover {
 a {
   text-decoration: none;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
 
+::view-transition-old(faith),
+::view-transition-new(faith) {
+  animation-duration: 1000ms;
+  animation-timing-function: ease;
+}
 
+::view-transition-old(faith) {
+  animation-name: fade-out, slideOut;
+}
 
+::view-transition-new(faith) {
+  animation-name: fade-in, slideIn;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate-out {
+  to {
+    transform: rotate(45deg);
+  }
+}
+@keyframes rotate-in {
+  from {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
